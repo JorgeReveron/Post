@@ -22,5 +22,11 @@ class Post {
       this.#subscribers.push(user);
     }
   }
+
+  detach(user) {
+    if (this.#subscribers.includes(user)) {
+      this.#subscribers.splice(this.#subscribers.indexOf(user), 1);
+    }
+  }
 }
 module.exports = Post;
